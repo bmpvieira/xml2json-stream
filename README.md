@@ -16,6 +16,7 @@ Options
 
 Usage
 =====
+```javascript
 var fs = require('fs')
   , xml2json = require('xml2json-stream')
   , parser = new xml2json.Parser('iteration')
@@ -23,6 +24,7 @@ var fs = require('fs')
   , output = fs.createWriteStream(process.argv[3]);
 
 input.pipe(parser).pipe(output);
+```
 
 License
 =======
