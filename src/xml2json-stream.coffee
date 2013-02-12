@@ -61,7 +61,12 @@ class Parser extends stream.Stream
           # delete indexes refs from arrays nesteds in current array's siblings
           delete pathArraysIndexes[key] for key of pathArraysIndexes when key not in path
 
-    @_saxParser.on 'text', (text) => tagObj[tagName] = text
+    @_saxParser.on 'text', (text) =>
+      number = Number text
+      if isNaN number
+        tagObj[tagName] = text
+      else
+        tagObj[tagName] = number
 
     @_saxParser.on 'closetag', (tag) =>
       if @_splitTag? and tag is @_splitTag
