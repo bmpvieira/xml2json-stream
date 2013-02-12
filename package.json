@@ -1,0 +1,15 @@
+{
+  "name": "xml2json-stream",
+  "description": "Converts XML to JSON, using Streams and sax. This can be used with above-memory-limits XML files, as long as they're mostly composed of a repetitive tag.",
+  "author": "Bruno Vieira <mail@bmpvieira.com> (http://bmpvieira.com/)",
+  "version": "0.1.0",
+  "main": "lib/xml2json-stream.js",
+  "license": {
+    "type": "MIT",
+    "url": "https://raw.github.com/bmpvieira/xml2json-stream/master/LICENSE"
+  },
+  "repository": "git://github.com/bmpvieira/xml2json-stream.git",
+  "dependencies": {
+    "sax": ">=0.5.1"
+  }
+}
